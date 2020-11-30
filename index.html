@@ -25,6 +25,7 @@
 $('.sideMenu li a').on('click', function(ev){
   ev.preventDefault();
   $(this).next('highlight').toggle();
+  $(this).next('infopanel').toggle();
  console.info("I Was Clicked");
 });
 </script>
