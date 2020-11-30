@@ -11,10 +11,21 @@
 <script>
   $(document).ready(function(){
     $("p").first().addClass("highlight")
-    $("#showmore").click(function(){
-      $("#morecontent").show();
+    $("#showMore").on('click', function(){
+      $("#moreContent").toggle("fast", function(){
+        if($(this).is(':hidden')){
+              $("#showMore").text("Show Details");
+        }else{
+               $("#showMore").text("Hide Details")
+      }
     });
-  });
+});
+//
+$('.sideMenu li a').on('click', function(ev){
+  ev.preventDefault();
+  $(this).next('.highlight').toggle();
+ console.info("I Was Clicked");
+});
 </script>
 </head>
 <body>
